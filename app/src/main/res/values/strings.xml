@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">GeoQuiz</string>
-    <string name="question_text">Berlin is the capital of Germany.</string>
     <string name="true_button">True</string>
     <string name="false_button">False</string>
     <string name="correct_toast">Correct!</string>
     <string name="incorrect_toast">Incorrect!</string>
+    <string name="next_question_button">Next</string>
+    <string name="questions_ocean">The Pacific Ocean is the world\'s largest ocean.</string>
+    <string name="questions_river">The Amazon River is the world\'s longest river.</string>
+    <string name="questions_lake">The Lake Baikal is the world\'s deepest lake.</string>
 </resources>

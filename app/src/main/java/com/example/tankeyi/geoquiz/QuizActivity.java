@@ -17,7 +17,8 @@ public class QuizActivity extends AppCompatActivity {
     private TrueFalse[] mQuestionBank = new TrueFalse[] {
             new TrueFalse(R.string.questions_ocean, true),
             new TrueFalse(R.string.questions_river, true),
-            new TrueFalse(R.string.questions_lake, true)
+            new TrueFalse(R.string.questions_lake, true),
+            new TrueFalse(R.string.questions_canada, false)
     };
 
     private int mCurrentIndex = 0;
@@ -25,6 +26,16 @@ public class QuizActivity extends AppCompatActivity {
     public void updateQuestion() {
         int question = mQuestionBank[mCurrentIndex].getQuestion();
         mQuestionTextView.setText(question);
+    }
+
+    private void checkAnswer(boolean userPressedTrue) {
+        boolean answerIsTrue = mQuestionBank[mCurrentIndex].isTrueQuestion();
+        int messageResID = 0;
+        if(userPressedTrue == answerIsTrue){
+            messageResID = R.string.correct_toast;
+        }
+        else messageResID = R.string.incorrect_toast;
+        Toast.makeText(this, messageResID, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -39,13 +50,13 @@ public class QuizActivity extends AppCompatActivity {
 
         mTrueButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Toast.makeText(QuizActivity.this, R.string.correct_toast, Toast.LENGTH_SHORT).show();
+                checkAnswer(true);
             }
         });
 
         mFalseButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Toast.makeText(QuizActivity.this, R.string.incorrect_toast, Toast.LENGTH_SHORT).show();
+                checkAnswer(false);
             }
         });
 

@@ -9,4 +9,7 @@
     <string name="questions_river">The Amazon River is the world\'s longest river.</string>
     <string name="questions_lake">The Lake Baikal is the world\'s deepest lake.</string>
     <string name="questions_canada">Toronto is the capital of Canada.</string>
+    <string name="play_button">Play</string>
+    <string name="rules_button">Rules</string>
+    <string name="exit_button">Exit</string>
 </resources>
